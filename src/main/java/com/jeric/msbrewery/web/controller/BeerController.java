@@ -44,6 +44,10 @@ public class BeerController {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
+    /*
+        This is a slightly different way of handling the HTTP status than the methods above by using the ResponseStatus
+        annotation and returning a No_Content.
+     */
     @DeleteMapping({"/{beerId}"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBeer(@PathVariable("beerId") UUID beerId) {
